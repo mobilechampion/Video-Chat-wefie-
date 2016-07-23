@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoMergeViewController">
+            <connections>
+                <outlet property="completeBtn" destination="xoP-5i-Y0f" id="4rJ-9O-Zbq"/>
+                <outlet property="containerView" destination="xUZ-OQ-3kj" id="ngM-yt-wQl"/>
+                <outlet property="detailBtn" destination="lYG-7L-jc7" id="zPr-e4-Miz"/>
+                <outlet property="eraseBtn" destination="7UX-c7-SSX" id="UyT-cQ-JWY"/>
+                <outlet property="resizeBtn" destination="BZO-q0-CeK" id="Ket-iF-fUA"/>
+                <outlet property="toolBar" destination="Eq5-c8-Yt9" id="CGs-a2-IF3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eq5-c8-Yt9">
+                    <rect key="frame" x="0.0" y="63" width="320" height="44"/>
+                    <items>
+                        <barButtonItem image="resize.png" id="BZO-q0-CeK">
+                            <connections>
+                                <action selector="resizeBtnClicked:" destination="-1" id="DN0-5B-FoY"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem image="eraser.png" id="7UX-c7-SSX">
+                            <connections>
+                                <action selector="mergeBtnClicked:" destination="-1" id="gzn-Oa-LEG"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem image="frontLayer.png" id="0bG-dR-QCj">
+                            <connections>
+                                <action selector="frontLayerBtnClicked:" destination="-1" id="guP-gV-Pmu"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="for-H3-Hbx"/>
+                        <barButtonItem image="ph.png" id="lYG-7L-jc7">
+                            <connections>
+                                <action selector="detailBtnClicked:" destination="-1" id="GNs-3h-Th1"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="done" systemItem="done" id="xoP-5i-Y0f">
+                            <connections>
+                                <action selector="completeBtnClicked:" destination="-1" id="4Eh-eN-C3e"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                    <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </toolbar>
+                <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="xUZ-OQ-3kj">
+                    <rect key="frame" x="6" y="113" width="308" height="420"/>
+                    <color key="backgroundColor" red="0.84684947109999997" green="0.95363177349999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="420" id="LE1-MN-1rf"/>
+                        <constraint firstAttribute="width" constant="308" id="U6r-sE-Jcr"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Eq5-c8-Yt9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0za-tR-QFO"/>
+                <constraint firstItem="xUZ-OQ-3kj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="IPw-WT-LHf"/>
+                <constraint firstItem="xUZ-OQ-3kj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="113" id="JiL-aR-FNJ"/>
+                <constraint firstItem="Eq5-c8-Yt9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="63" id="LjQ-Bc-IVA"/>
+                <constraint firstAttribute="bottom" secondItem="xUZ-OQ-3kj" secondAttribute="bottom" constant="35" id="TNs-Jh-yj0"/>
+                <constraint firstItem="xUZ-OQ-3kj" firstAttribute="centerX" secondItem="Eq5-c8-Yt9" secondAttribute="centerX" id="YmW-rJ-h3D"/>
+            </constraints>
+            <point key="canvasLocation" x="102" y="105"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="eraser.png" width="28" height="28"/>
+        <image name="frontLayer.png" width="32" height="32"/>
+        <image name="ph.png" width="40" height="40"/>
+        <image name="resize.png" width="25" height="25"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
